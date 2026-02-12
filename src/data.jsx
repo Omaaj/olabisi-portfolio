@@ -207,35 +207,18 @@ export const skills = [
     title: "Javascript",
     img: "./img/skills/JS.svg",
   },
+  {
+    id: 5,
+    title: "Tailwind Css",
+    img: "./img/skills/tailwind-svgrepo-com.svg",
+  },
 
-  // {
-  //   id: 5,
-  //   title: 'Wordpress',
-  //   img: './img/skills/wordpress.svg',
-  // },
-
-  // {
-  //   id: 6,
-  //   title: 'woocomerce',
-  //   img: './img/skills/woocommerce.svg',
-  // },
-
-  // {
-  //   id: 7,
-  //   title: 'Typescript',
-  //   img: './img/skills/TypeScript.svg',
-  // },
   {
     id: 8,
     title: "React",
     img: "./img/skills/react.svg",
   },
 
-  {
-    id: 9,
-    title: "Styled-component",
-    img: "./img/skills/styled-components.svg",
-  },
   {
     id: 10,
     title: "Redux-Toolkit",
@@ -251,31 +234,7 @@ export const skills = [
     title: "Firebase",
     img: "./img/skills/firebase.svg",
   },
-  // {
-  //   id: 13,
-  //   title: "Node",
-  //   img: "./img/skills/node-js.svg",
-  // },
-  // {
-  //   id: 14,
-  //   title: "Php",
-  //   img: "./img/skills/php.svg",
-  // },
-  {
-    id: 15,
-    title: "AWS",
-    img: "./img/skills/aws.svg",
-  },
-  // {
-  //   id: 16,
-  //   title: "Google-Cloud",
-  //   img: "./img/skills/cloud.svg",
-  // },
-  // {
-  //   id: 17,
-  //   title: "Azure",
-  //   img: "./img/skills/azure-devops.svg",
-  // },
+
   {
     id: 18,
     title: "Affilate-Marketer",
@@ -399,7 +358,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc1: "https://cryptofxmgmt-dashboard.rimberios.com/",
+        desc1: "https://cryptofxmgmtdashboard.rimberios.com/",
         desc: "cryptofxmgmt-dashboard.com",
       },
     ],

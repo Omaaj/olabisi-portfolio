@@ -1,19 +1,23 @@
-import React from "react";
+import Seperator from "../../reusableComponent/seperator/Seperator";
+import CurrentlyBuilding from "./currentlyBuilding/CurrentlyBuilding";
 import "./Portfolio.scss";
-import { portfolio } from "../../data";
-import PortfolioItems from "./PortfolioItems";
+import Production from "./production/Production";
+import Professional from "./professional/Professional";
+import SystemDesign from "./systemDesign/SystemDesign";
 
 export default function Portfolio() {
   return (
-    <section className="portfolio section">
-      <h2 className="section__title">
-        My <span>Portfolio</span>
+    <main className="px-4 py-7 customXlg:pl-6 customXlg:pr-24">
+      <h2 className="mb-5 text-4xl font-bold customMiniTablet:text-center text-customOrange-100">
+        <span>Portfolio</span>
       </h2>
-      <div className="portfolio__container container grid">
-        {portfolio.map((item) => {
-          return <PortfolioItems key={item.id} {...item} />;
-        })}
-      </div>
-    </section>
+      <section className="mx-auto customTablet1:container pb-2">
+        <Production />
+        <Seperator />
+        <Professional />
+        <Seperator />
+        <SystemDesign />
+      </section>
+    </main>
   );
 }

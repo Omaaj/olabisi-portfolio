@@ -4,18 +4,23 @@
 :root {
   /* colors */
   --first-color: hsl(19, 96%, 52%);
-  --title-color: hsl(0, 0%, 40%);
+  /* --title-color: hsl(0, 0%, 40%);
   --text-color: hsl(0, 0%, 50%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 93%);
-  --border-color: hsl(0, 0%, 87%);
+  --border-color: hsl(0, 0%, 87%); */
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 80%);
+  --body-color: hsl(0, 0%, 7%);
+  --container-color: hsl(0, 1%, 17%);
+  --border-color: hsl(0, 0%, 15%);
   --text-white: #fff;
 
   /* fonts-size */
   --body-font: "Open Sans", sans-serif;
   --second-font: "Poppins", sans-serif;
 
-  --big-font-size: 56px;
+  --big-font-size: 46px;
   --h1-font-size: 50px;
   --h2-font-size: 32px;
   --h3-font-size: 24px;
@@ -109,7 +114,6 @@ img {
   font-size: var(--big-font-size);
   font-weight: var(--weight-800);
   text-align: center;
-  margin-bottom: 70px;
 }
 
 .section__title span {

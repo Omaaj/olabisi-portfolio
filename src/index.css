@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #cbcbcb transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 1px;
+    width: 5px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #cccbcb;
+    border-radius: 9999px;
+  }
+
+  .seperator {
+    border-top: 1px solid hsl(0, 0%, 15%);
+    max-width: 40%;
+    margin: 72px auto 40px;
+  }
+}
+
+@layer utilities {
+  .transist {
+    transition: all 0.4s ease;
+  }
+}

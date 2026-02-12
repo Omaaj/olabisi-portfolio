@@ -1,83 +1,90 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Contact.scss";
-import {
-  FaEnvelopeOpen,
-  FaGithub,
-  FaLinkedin,
-  FaPhoneSquareAlt,
-} from "react-icons/fa";
+import { FaCopy, FaEnvelopeOpen, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import useFormState from "../../hooks/useFormState";
+import { formDetails } from "./contactDeatils";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToContactBox,
+  selectContactError,
+  selectContactLoading,
+} from "../../redux/features/contactInbox/contactInboxSlice";
 import { toast } from "react-toastify";
+import { ClipLoader } from "react-spinners";
+import useLazyLoading from "../../hooks/useLazyLoading";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Subject: "",
-    Message: "",
-  });
+  const [copyText, setCopyText] = useState("");
+  const loading = useSelector(selectContactLoading);
+  const error = useSelector(selectContactError);
+  const { errorState, formState, handleStateChange, handleSubmit } =
+    useFormState(formDetails);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formEle = document.querySelector(".contact__form");
-    const formData = new FormData(formEle);
-    const formSheets = process.env.REACT_APP_API_SHEETS;
+  const dispatch = useDispatch();
 
+  const hanldeCopyText = () => {
+    navigator.clipboard.writeText("juwiz999@gmail.com");
+    setCopyText("Copied!");
+  };
+
+  const addToInbox = async () => {
     try {
-      await fetch(formSheets, {
-        method: "POST",
-        body: formData,
-      });
-
-      toast.success("Your message has been sent!");
-      setFormData({
-        Name: "",
-        Email: "",
-        Subject: "",
-        Message: "",
-      });
+      await dispatch(addToContactBox(formState)).unwrap();
+      toast.success("Message Delivered!!!");
     } catch (error) {
-      toast.error("Failed to send message. Please try again later.");
+      toast.error(error);
     }
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  useEffect(() => {
+    if (copyText !== "Copied!") return;
+
+    const timeOut = setTimeout(() => setCopyText(""), 1000);
+
+    return () => clearTimeout(timeOut);
+  }, [copyText]);
+
+  const phoneNumber = 2349071049925;
 
   return (
-    <section className="contact section">
-      <h2 className="section__title">
+    <section className="pl-4 pr-4 contact section customXlg:pr-24 customXlg:pl-7">
+      <h2 className="mb-8 section__title">
         Get In<span>Touch</span>
       </h2>
 
-      <div className="contact__conatainer container grid">
+      <div className="grid contact__conatainer customTablet1:container">
         <div className="contact__data">
-          <h3 className="contact__title">
-            Please don't hesitate to contact me.
-          </h3>
+          <h3 className="contact__title">Open to Frontend Engineer Roles</h3>
 
-          <p className="contact__description">
-            I welcome discussions about new projects, creative ideas, or
-            opportunities to contribute to your vision.
+          <p className="contact__description ">
+            Frontend Engineer building clean, scalable, production-ready
+            interfaces.
           </p>
 
-          <div className="contact__info">
+          <div className="relative pt-1 contact__info">
             <div className="info__item">
               <FaEnvelopeOpen className="info__icon" />
 
               <div>
-                <span className="info__title">Mail me</span>
                 <h4 className="info__desc">juwiz999@gmail.com</h4>
               </div>
-            </div>
-            <div className="info__item">
-              <FaPhoneSquareAlt className="info__icon" />
 
-              <div>
-                <span className="info__title">Call me</span>
-                <h4 className="info__desc">+234 907 352 0712</h4>
+              <p
+                className="top-0 text-lg cursor-pointer"
+                onClick={hanldeCopyText}
+                onMouseEnter={() =>
+                  setCopyText((prevCopy) => (prevCopy ? "" : "copy"))
+                }
+                onMouseLeave={() => setCopyText("")}
+              >
+                <FaCopy />
+              </p>
+              <div className="relative">
+                <p className="absolute text-sm -top-9 -right-2">{copyText}</p>
               </div>
             </div>
           </div>
@@ -85,69 +92,103 @@ export default function Contact() {
             <Link
               target="_blank"
               to="https://github.com/Omaaj?tab=repositories"
-              className="contact__social-link"
+              className="text-xl contact__social-link"
             >
               <FaGithub />
             </Link>
             <Link
               target="_blank"
               to="https://www.linkedin.com/in/atunwon-olajuwon/"
-              className="contact__social-link"
+              className="text-xl contact__social-link"
             >
               <FaLinkedin />
             </Link>
+            <Link
+              target="_blank"
+              to={`https://wa.me/${phoneNumber}`}
+              className="text-xl contact__social-link"
+            >
+              <IoLogoWhatsapp />
+            </Link>
+            <Link
+              target="_blank"
+              to="https://x.com/omaajTech"
+              className="text-xl contact__social-link"
+            >
+              <FaSquareXTwitter />
+            </Link>
           </div>
         </div>
-        <form className="contact__form" onSubmit={(e) => handleSubmit(e)}>
+        <form
+          className="contact__form"
+          onSubmit={(e) => handleSubmit(e, addToInbox)}
+        >
           <div className="form__input-group">
             <div className="form__input-div">
               <input
                 type="text"
                 className="form__control"
-                placeholder="Your Name"
-                name="Name"
-                value={formData.Name}
-                onChange={handleChange}
-                required
+                placeholder="Name"
+                value={formState.name}
+                name="name"
+                onChange={handleStateChange}
               />
-            </div>
-            <div className="form__input-div">
-              <input
-                type="email"
-                className="form__control"
-                placeholder="Your Email"
-                name="Email"
-                value={formData.Email}
-                onChange={handleChange}
-                required
-              />
+              {errorState.name && (
+                <p className="pl-2 mt-3 text-sm text-customRed-200">
+                  {errorState.name}
+                </p>
+              )}
             </div>
             <div className="form__input-div">
               <input
                 type="text"
                 className="form__control"
-                placeholder="Your Subject"
-                name="Subject"
-                value={formData.Subject}
-                onChange={handleChange}
-                required
+                placeholder="Email"
+                value={formState.email}
+                name="email"
+                onChange={handleStateChange}
               />
+              {errorState.email && (
+                <p className="pl-2 mt-3 text-sm text-customRed-200">
+                  {errorState.email}
+                </p>
+              )}
+            </div>
+            <div className="form__input-div">
+              <input
+                type="text"
+                className="form__control"
+                placeholder="Subject"
+                value={formState.subject}
+                name="subject"
+                onChange={handleStateChange}
+              />
+              {errorState.subject && (
+                <p className="pl-2 mt-3 text-sm text-customRed-200">
+                  {errorState.subject}
+                </p>
+              )}
             </div>
           </div>
           <div className="form__input-div">
             <textarea
-              placeholder="Your Message"
+              placeholder="Message"
               className="form__control textarea"
-              name="Message"
-              value={formData.Message}
-              onChange={handleChange}
-              required
-            ></textarea>
+              value={formState.message}
+              name="message"
+              onChange={handleStateChange}
+            />
+            {errorState.message && (
+              <p className="pl-2 mt-3 text-sm text-customRed-200">
+                {errorState.message}
+              </p>
+            )}
           </div>
-          <button className="button">
-            Send Message
-            <span className="button__icon contact__button-icon">
-              <FiSend />
+          <button className="button" type="submit">
+            {loading ? <p>Loading...</p> : "Send Message"}
+
+            <span className="flex items-center justify-center button__icon contact__button-icon">
+              {loading ? <ClipLoader size={20} color="#fff" /> : <FiSend />}
             </span>
           </button>
         </form>

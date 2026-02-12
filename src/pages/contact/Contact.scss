@@ -41,11 +41,11 @@
     .info__item {
       display: flex;
       align-items: center;
-      column-gap: 16px;
+      column-gap: 14px;
 
       .info__icon {
         color: var(--first-color);
-        font-size: var(--h2-font-size);
+        font-size: var(--h3-font-size);
       }
 
       .info__title {
@@ -70,8 +70,9 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      text-align: center;
-      line-height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       transition: all 0.5s ease;
 
       &:hover {

@@ -5,25 +5,31 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <section className="home section grid">
+    <section className="grid  customTablet1:container home section">
       <div className="img__box">
         <img src="./img/Untitled design (1).png" alt="" className="home__img" />
       </div>
       <div className="home__content">
         <div className="home__data">
           <h1 className="home__title">
-            <span>I'm Atunwon Olajuwon.</span>
-            Software Developer : Transforming Ideas into Code
+            <span className="font-semibold">I'm Atunwon Olajuwon.</span>
+            Frontend Engineer
           </h1>
-          <p className="home__description">
-            I'm a versatile frontend developer skilled in creating seamless and
-            scalable web solutions. I bring a holistic approach to software
-            development.
+          <p className="mt-4 font-semibold text-customGray-800 customMiniTablet:w-[400px]">
+            I build production-ready web applications that work reliably in the
+            real world.
           </p>
-          <Link to="/about" className="button">
-            More About Me
+          <p className="home__description">
+            My work includes authentication, dashboards, transactions, API
+            integration, and state management with a focus on building complete
+            systems.
+          </p>
+          <Link to="/portfolio" className="button">
+            View My Work
             <span className="button__icon">
-              <FaArrowRight />
+              <span className="relative left-5 top-[18px]">
+                <FaArrowRight />
+              </span>
             </span>
           </Link>
         </div>
