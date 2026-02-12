@@ -10,17 +10,14 @@ import { formDetails } from "./contactDeatils";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToContactBox,
-  selectContactError,
   selectContactLoading,
 } from "../../redux/features/contactInbox/contactInboxSlice";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
-import useLazyLoading from "../../hooks/useLazyLoading";
 
 export default function Contact() {
   const [copyText, setCopyText] = useState("");
   const loading = useSelector(selectContactLoading);
-  const error = useSelector(selectContactError);
   const { errorState, formState, handleStateChange, handleSubmit } =
     useFormState(formDetails);
 

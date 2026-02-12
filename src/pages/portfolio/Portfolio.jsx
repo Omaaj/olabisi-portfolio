@@ -1,5 +1,4 @@
 import Seperator from "../../reusableComponent/seperator/Seperator";
-import CurrentlyBuilding from "./currentlyBuilding/CurrentlyBuilding";
 import "./Portfolio.scss";
 import Production from "./production/Production";
 import Professional from "./professional/Professional";

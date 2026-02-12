@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { ContactInboxContext } from "../../../context/contactInbox/ContactInboxContext";
-import ScrollBar from "../../../reusableComponent/scrollBar/ScrollBar";
-import ContactResultsCards from "./ContactResultsCards";
 import clsx from "clsx";
+import ContactResultsCards1 from "./ContactResultsCards1";
 
 const ContactResults = () => {
-  const { data, loading: contactLoading } = useContext(ContactInboxContext);
+  const { data } = useContext(ContactInboxContext);
 
   return (
     <>
@@ -28,7 +27,7 @@ const ContactResults = () => {
                 ?.slice()
                 ?.sort((a, b) => b.timeStamp.localeCompare(a.timeStamp))
                 ?.map((coin) => (
-                  <ContactResultsCards key={coin.id} coin={coin} />
+                  <ContactResultsCards1 key={coin.id} coin={coin} />
                 ))
             ) : (
               <p>No Message</p>

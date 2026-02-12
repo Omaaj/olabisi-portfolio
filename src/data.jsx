@@ -4,7 +4,6 @@ import {
   FaFolderOpen,
   FaEnvelopeOpen,
   FaBriefcase,
-  FaGraduationCap,
   FaCode,
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
@@ -363,34 +362,6 @@ export const portfolio = [
       },
     ],
   },
-
-  // {
-  //   id: 5,
-  //   img: "./img/work/v2 (5).jpeg",
-  //   title: "Gary-Fryer-Timer",
-  //   details: [
-  //     {
-  //       icon: <FiFileText />,
-  //       title: "Project : ",
-  //       desc: "Video",
-  //     },
-  //     {
-  //       icon: <FiUser />,
-  //       title: "Client : ",
-  //       desc: "Dribble",
-  //     },
-  //     {
-  //       icon: <FaCode />,
-  //       title: "Language : ",
-  //       desc: "Adobe Premium",
-  //     },
-  //     {
-  //       icon: <FiExternalLink />,
-  //       title: "Preview : ",
-  //       desc: "www.dribble.com",
-  //     },
-  //   ],
-  // },
 ];
 
 export const themes = [

@@ -1,16 +1,13 @@
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import Subtitle from "../../../reusableComponent/subtitle/Subtitle";
-import { profDetails, professionalDetails } from "../portfollioDetails";
+import { professionalDetails } from "../portfollioDetails";
 import { BsDashLg } from "react-icons/bs";
-import { IoIosLink } from "react-icons/io";
 import useSingleAccordion from "../../../hooks/useSingleAccordion";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Professional = () => {
   const { selectedId, handleSelectedId } = useSingleAccordion();
-
-  const getProDetilArr = profDetails(professionalDetails);
 
   return (
     <section>
