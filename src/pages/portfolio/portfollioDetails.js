@@ -783,7 +783,7 @@ export const professionalDetails = [
     companyBrand: "IT Solutions Company",
     year: "June 2023 – May 2024",
     url: "https://nigeria24.me/waleco-nig-ltd?utm_source=planpaddy-technologies",
-    info: "Planpaddy Technologies is an IT solutions company that builds web platforms and digital tools for businesses, including dashboards and custom software solutions.",
+    info: "Planpaddy Technologies is an IT solutions company that builds web platforms and digigital tools for businesses, including dashboards and custom software solutions.",
     contribution: [
       "Built and styled responsive UI components using HTML, CSS, and JavaScript for internal and client-facing web applications.",
       "Translated design mockups into structured, user-friendly layouts across multiple screen sizes.",

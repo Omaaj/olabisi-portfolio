@@ -15,9 +15,7 @@ const Professional = () => {
       <div className="space-y-3">
         {professionalDetails.map((profe) => {
           const {
-            challenges,
             contribution,
-            impact,
             info,
             stack,
             url,
