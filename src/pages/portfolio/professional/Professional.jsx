@@ -86,7 +86,7 @@ const Professional = () => {
                         <h2 className="font-bold mb-1">Technologies Used</h2>
                         <p>{stack}</p>
                       </div>
-                      <div>
+                      {/* <div>
                         <h2 className="font-bold">Challenges & Growth</h2>
                         <ul className="text-[15px] pl-3 list-disc space-y-2 mt-2 font-light">
                           {challenges.map((con) => (
@@ -101,7 +101,7 @@ const Professional = () => {
                             <li key={con}>{con}</li>
                           ))}
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </motion.div>
                 )}
