@@ -19,6 +19,13 @@ import Skin2 from "../../components/assets/portfolio/production/skinCare/skc2.pn
 import Skin3 from "../../components/assets/portfolio/production/skinCare/skc3.png";
 import Skin4 from "../../components/assets/portfolio/production/skinCare/skc4.png";
 import Skin5 from "../../components/assets/portfolio/production/skinCare/skc5.png";
+import Sys1 from "../../components/assets/portfolio/systems/sys1.png";
+import Sys2 from "../../components/assets/portfolio/systems/sys2.png";
+import Sys3 from "../../components/assets/portfolio/systems/sys3.png";
+import Sys4 from "../../components/assets/portfolio/systems/sys4.png";
+import Sys5 from "../../components/assets/portfolio/systems/sys5.png";
+import Sys6 from "../../components/assets/portfolio/systems/sys6.png";
+import Sys7 from "../../components/assets/portfolio/systems/sys7.png";
 
 // Production Work
 export const productionWorkDetails = [
@@ -519,31 +526,31 @@ export const systemDetails = [
     images: [
       {
         id: 1,
-        img: Ecom2,
+        img: Sys3,
       },
       {
         id: 2,
-        img: Ecom1,
+        img: Sys1,
       },
       {
         id: 3,
-        img: Ecom3,
+        img: Sys2,
       },
       {
         id: 4,
-        img: Ecom4,
+        img: Sys4,
       },
       {
         id: 5,
-        img: Ecom5,
+        img: Sys5,
       },
       {
         id: 6,
-        img: Ecom6,
+        img: Sys6,
       },
       {
         id: 7,
-        img: Ecom7,
+        img: Sys7,
       },
     ],
     purposeDetails: {

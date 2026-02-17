@@ -1,5 +1,5 @@
 import Subtitle from "../../../reusableComponent/subtitle/Subtitle";
-import MainPage from "../../../components/assets/portfolio/systems/sys1.png";
+import MainPage from "../../../components/assets/portfolio/systems/sys3.png";
 import { systemDetails } from "../portfollioDetails";
 import ProductionCard from "../production/ProductionCard";
 
