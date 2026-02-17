@@ -501,7 +501,7 @@ export const systemDetails = [
     techStack:
       "React · Redux Toolkit · Firebase · REST APIs · Tailwind · Axios · Git · Postman · Redux DevTools · Vercel",
     year: "2025",
-    urlLink: "https://citibankonline.vercel.app/personalBanking",
+    urlLink: "https://omaajpay.vercel.app/personalBanking",
     role: "Frontend Engineer",
     category: "systems",
     pageSubtitle:
