@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <section className="grid  customTablet1:container home section">
+    <section className="grid customTablet1:container home section">
       <div className="img__box">
         <img src="./img/Untitled design (1).png" alt="" className="home__img" />
       </div>
@@ -16,13 +16,14 @@ export default function Home() {
             Frontend Engineer
           </h1>
           <p className="mt-4 font-semibold text-customGray-800 customMiniTablet:w-[400px]">
-            I build production-ready web applications that work reliably in the
-            real world.
+            I develop production-ready web applications built for real-world
+            complexity.
           </p>
           <p className="home__description">
-            My work includes authentication, dashboards, transactions, API
-            integration, and state management with a focus on building complete
-            systems.
+            My focus includes secure authentication, API integrations,
+            transactional logic, and scalable state management, delivering
+            systems that are reliable, maintainable, and built to handle growing
+            complexity.
           </p>
           <Link to="/portfolio" className="button">
             View My Work

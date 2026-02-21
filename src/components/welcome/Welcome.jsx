@@ -49,21 +49,31 @@ const Welcome = ({ setWelcomePage }) => {
               Hi, I’m a Frontend Engineer
             </span>{" "}
             <span>
-              I build and ship production web applications used by real users.
+              I build and ship production-grade web applications that power real
+              business operations.
             </span>
           </h2>
           <h1 className="text-white text-xl customMiniTablet:text-3xl font-extralight customMiniTablet:max-w-[850px] mt-8 leading-[1.4] customMiniTablet:leading-[1.4]">
-            I design and develop complete, functional web products with real
-            users in mind from{" "}
-            <span className="text-customYellow-100 ">authentication</span> and{" "}
-            <span className="text-customYellow-100">dashboards to</span>{" "}
-            <span className="text-customYellow-100">transactions</span>,{" "}
-            <span className="text-customYellow-100">APIs,</span> and{" "}
-            <span className="text-customYellow-100">state management</span>.
+            From{" "}
+            <span className="text-customYellow-100 ">
+              secure authentication
+            </span>{" "}
+            and{" "}
+            <span className="text-customYellow-100">transactional flows</span>{" "}
+            to{" "}
+            <span className="text-customYellow-100">
+              data-driven dashboards
+            </span>{" "}
+            and{" "}
+            <span className="text-customYellow-100">
+              scalable state architecture.
+            </span>{" "}
+            I design systems built for reliability, performance, and growth.
           </h1>
           <Note content="rounded-full h-24 customMiniTablet:h-14 w-1.5 bg-[#585858]">
-            I focus on writing code that reads like English, so both engineers
-            and non-technical teammates can understand what the system is doing.
+            I write clear, maintainable code designed for collaboration, so
+            engineers and stakeholders understand not just what the system does,
+            but how it works.
           </Note>
         </section>
         <p className="mt-6 text-red-600">{error}</p>
