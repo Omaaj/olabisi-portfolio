@@ -736,7 +736,7 @@ export const professionalDetails = [
     title: "Frontend Engineer",
     company: "Ovaloop",
     companyBrand: "SaaS Business Management Platform",
-    year: "February 2025 – November 2025",
+    year: "February 2025 – March 2026",
     url: "https://www.ovaloop.com/",
     info: "Ovaloopp is a SaaS business management platform designed to help small and medium-sized businesses manage inventory, sales, staff roles, customer wallets, and daily operations through a centralized dashboard.",
     contribution: [
@@ -788,7 +788,7 @@ export const professionalDetails = [
     company: "Planpaddy Technologies",
     title: "Frontend Developer",
     companyBrand: "IT Solutions Company",
-    year: "February 2023 – July 2024",
+    year: "January 2023 – July 2024",
     url: "https://nigeria24.me/waleco-nig-ltd?utm_source=planpaddy-technologies",
     info: "Planpaddy Technologies is an IT solutions company that builds web platforms and digigital tools for businesses, including dashboards and custom software solutions.",
     contribution: [
