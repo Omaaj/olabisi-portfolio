@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Contact.scss";
-import { FaCopy, FaEnvelopeOpen, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCopy, FaEnvelopeOpen, FaGithub } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { IoLogoWhatsapp } from "react-icons/io";
