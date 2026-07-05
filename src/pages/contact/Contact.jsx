@@ -45,7 +45,7 @@ export default function Contact() {
     return () => clearTimeout(timeOut);
   }, [copyText]);
 
-  const phoneNumber = 2349071049925;
+  const phoneNumber = 2348020565761;
 
   return (
     <section className="pl-4 pr-4 contact section customXlg:pr-24 customXlg:pl-7">
@@ -67,7 +67,7 @@ export default function Contact() {
               <FaEnvelopeOpen className="info__icon" />
 
               <div>
-                <h4 className="info__desc">juwiz999@gmail.com</h4>
+                <h4 className="info__desc">olabisiolaitan2009@gmail.com</h4>
               </div>
 
               <p
@@ -93,13 +93,13 @@ export default function Contact() {
             >
               <FaGithub />
             </Link>
-            <Link
+            {/* <Link
               target="_blank"
               to="https://www.linkedin.com/in/atunwon-olajuwon/"
               className="text-xl contact__social-link"
             >
               <FaLinkedin />
-            </Link>
+            </Link> */}
             <Link
               target="_blank"
               to={`https://wa.me/${phoneNumber}`}

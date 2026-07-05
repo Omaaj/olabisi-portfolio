@@ -42,13 +42,13 @@ export const personalInfo = [
   {
     id: 1,
     title: "First Name : ",
-    description: "Atunwon",
+    description: "Olabisi",
   },
 
   {
     id: 2,
     title: "Last Name : ",
-    description: "Olajuwon",
+    description: "Ajani",
   },
 
   {

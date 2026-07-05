@@ -41,7 +41,7 @@ const Welcome = ({ setWelcomePage }) => {
           <div className="w-12">
             <img src={LogoImg} alt="" className="object-cover w-full" />
           </div>
-          <h1 className="text-xl text-white">OmaaJTech</h1>
+          <h1 className="text-xl text-white">Ajani</h1>
         </header>
         <section>
           <h2 className="text-white w-full customMiniTablet:text-[17px] flex flex-col space-y-1">
